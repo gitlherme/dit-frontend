@@ -26,5 +26,8 @@ export default Vue.extend({})
       margin-right: 0.5rem;
     }
   }
+  h1 {
+    font-family: $secondary-font;
+  }
 }
 </style>
