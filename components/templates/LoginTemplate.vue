@@ -2,8 +2,8 @@
   <div class="login-template">
     <h1>Entrar na plataforma</h1>
     <FormLogin />
-    <span>Esqueceu a senha?</span>
-    <span>Registrar-se</span>
+    <NuxtLink to="/forgot-password"> Esqueceu a senha? </NuxtLink>
+    <NuxtLink to="/register"> Registrar-se </NuxtLink>
   </div>
 </template>
 
@@ -18,14 +18,13 @@ export default Vue.extend({})
   display: flex;
   flex-direction: column;
   color: color('primaryDark');
-  span {
+  a {
     text-align: center;
     margin: 0.5rem 0;
+    text-decoration: none;
+    color: color('primaryDark');
   }
   h1 {
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-align: center;
     font-family: $secondary-font;
   }
 }

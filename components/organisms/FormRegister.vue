@@ -1,23 +1,23 @@
 <template>
-  <form class="form-login">
-    <label for="email-login">E-mail</label>
+  <form class="form-register">
+    <label for="email-register">E-mail</label>
     <InputPrimary
-      id="email-login"
+      id="email-register"
       placeholder="Digite seu e-mail"
       type="email"
     />
-    <label for="password-login">Senha</label>
+    <label for="password-register">Senha</label>
     <InputPrimary
-      id="password-login"
+      id="password-register"
       placeholder="Digite sua senha"
       type="password"
     />
-    <Button type="submit" value="Entrar" buttonClass="primary" />
+    <Button type="submit" value="Registrar" buttonClass="primary" />
   </form>
 </template>
 
 <style lang="scss" scoped>
-.form-login {
+.form-register {
   display: flex;
   flex-direction: column;
   input {

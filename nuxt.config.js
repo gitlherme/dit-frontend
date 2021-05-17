@@ -18,7 +18,7 @@ export default {
           'A DIT. é uma plataforma que conecta empresas com candidatos focados em diversidade.',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -34,6 +34,23 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    [
+      'nuxt-fontawesome',
+      {
+        component: 'fa', // customize component name
+        imports: [
+          {
+            set: '@fortawesome/free-solid-svg-icons',
+            icons: ['faAngleLeft'],
+          },
+          { set: '@fortawesome/free-brands-svg-icons', icons: ['faGithub'] },
+          {
+            set: '@fortawesome/free-regular-svg-icons',
+            icons: ['faLightbulb'],
+          },
+        ],
+      },
+    ],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
