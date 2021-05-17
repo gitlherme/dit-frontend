@@ -1,4 +1,24 @@
 $colors: (
+  primaryDark: (
+    lightest: #090B2A,
+    base: #060418,
+    darkest: #04020E
+  ),
+  primaryLight: (
+    lightest: #30ADF3,
+    base: #00A8E8,
+    darkest: #0296C5
+  ),
+  secondary: (
+    lightest: #D12A52,
+    base: #C32236,
+    darkest: #BB1C2F
+  ),
+  tertiary: (
+    lightest: #E3AB3E,
+    base: #E5A11E,
+    darkest: #CB8010
+  ),
   light: (
     lightest: #FFFFFF,
     base: #EFF2F5,
@@ -8,29 +28,7 @@ $colors: (
     lightest: #202946,
     base: #0F1326,
     darkest: #060713
-  ),
-
-  darkblue: (
-    lightest: #090B2A,
-    base: #060418,
-    darkest: #04020E
-  ),
-  lightblue: (
-    lightest: #30ADF3,
-    base: #00A8E8,
-    darkest: #0296C5
-  ),
-  red: (
-    lightest: #D12A52,
-    base: #C32236,
-    darkest: #BB1C2F
   )
-  orange: (
-    lightest: #E3AB3E,
-    base: #E5A11E,
-    darkest: #CB8010
-  )
-
 ) !default;
 
 @function color($color, $complementary: null) {
