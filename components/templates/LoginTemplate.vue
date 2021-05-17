@@ -25,9 +25,6 @@ export default Vue.extend({})
     color: color('primaryDark');
   }
   h1 {
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-align: center;
     font-family: $secondary-font;
   }
 }
