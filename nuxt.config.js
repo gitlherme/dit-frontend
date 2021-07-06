@@ -49,8 +49,9 @@ export default {
             icons: ['faLightbulb'],
           },
         ],
-      },
+      },  
     ],
+    '@nuxtjs/tailwindcss'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -58,6 +59,8 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
+    'bootstrap-vue/nuxt',
+    '@nuxtjs/axios'
   ],
 
   styleResources: {

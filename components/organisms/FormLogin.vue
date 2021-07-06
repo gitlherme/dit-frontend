@@ -12,14 +12,28 @@
       placeholder="Digite sua senha"
       type="password"
     />
-    <Button type="submit" value="Entrar" buttonClass="primary" />
+    <NuxtLink to="/dashboard">
+      <Button type="submit" value="Entrar" buttonClass="primary" />
+    </NuxtLink>
   </form>
 </template>
+
+<script>
+
+</script>
 
 <style lang="scss" scoped>
 .form-login {
   display: flex;
   flex-direction: column;
+  a {
+    width: 100%;
+    color: black;
+  }
+  button {
+    width: 100%;
+    color: color('primaryDark');
+  }
   input {
     margin-bottom: 2rem;
   }
