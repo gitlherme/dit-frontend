@@ -34,24 +34,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    [
-      'nuxt-fontawesome',
-      {
-        component: 'fa', // customize component name
-        imports: [
-          {
-            set: '@fortawesome/free-solid-svg-icons',
-            icons: ['faAngleLeft'],
-          },
-          { set: '@fortawesome/free-brands-svg-icons', icons: ['faGithub'] },
-          {
-            set: '@fortawesome/free-regular-svg-icons',
-            icons: ['faLightbulb'],
-          },
-        ],
-      },  
-    ],
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/fontawesome',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -60,11 +44,19 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
     'bootstrap-vue/nuxt',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
   ],
 
   styleResources: {
     scss: ['@/components/bosons/*.scss'],
+  },
+
+  // Fontawesome
+  fontawesome: {
+    icons: {
+      solid: ['faBookmark', 'faBell', 'faHeart'],
+      brands: ['faApple', 'faDiscord', 'faAtlassian'],
+    },
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

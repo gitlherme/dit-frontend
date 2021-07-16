@@ -1,18 +1,14 @@
 <template>
   <div class="register-template">
     <NuxtLink to="/login" class="back-to-login">
-      <fa :icon="['fas', 'angle-left']" /> Voltar
+      <font-awesome-icon :icon="['fas', 'home']" /> Voltar
     </NuxtLink>
     <h1>Registre-se na plataforma</h1>
     <FormRegister />
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({})
-</script>
+<script lang="ts"></script>
 
 <style lang="scss" scoped>
 .register-template {

@@ -1,3 +1,3 @@
 <template>
-  <div>User dashboard</div>
+  <UserDashboardTemplate />
 </template>

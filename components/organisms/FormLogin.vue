@@ -18,10 +18,6 @@
   </form>
 </template>
 
-<script>
-
-</script>
-
 <style lang="scss" scoped>
 .form-login {
   display: flex;

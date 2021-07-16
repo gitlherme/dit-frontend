@@ -1,3 +1,3 @@
 <template>
-  <div>User profile</div>
+  <ProfileTemplate />
 </template>
