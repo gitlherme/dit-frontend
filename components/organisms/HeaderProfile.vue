@@ -1,15 +1,8 @@
 <template>
-  <div
-    class="
-      header-profile
-      col-span-12
-      row-start-1 row-end-4
-      grid grid-cols-12
-      gap-4
-      mt-5
-    "
-  >
-    <div class="header-profile__avatar rounded-3xl col-span-3 h-full">
+  <div class="header-profile grid grid-cols-12 gap-4">
+    <div
+      class="header-profile__avatar light-block rounded-3xl col-span-3 h-full"
+    >
       <img
         src="../../assets/images/avatar.png"
         class="header-profile__avatar-img rounded-t-3xl"
@@ -23,8 +16,8 @@
       </div>
     </div>
     <div class="header-profile__about col-span-7 h-full">
-      <h1>Perfil</h1>
-      <div class="header-profile__about-block rounded-3xl p-6">
+      <TitleWithMark text="Perfil" />
+      <div class="header-profile__about-block light-block rounded-3xl p-6">
         <h4 class="uppercase mb-3">A minha biografia</h4>
         <hr />
         <p class="mt-3 mb-3">
@@ -41,12 +34,11 @@
           sit. Pellentesque amet urna bibendum lacus, a, adipiscing et felis
           laoreet. Tempor viverra vehicula amet, vivamus vitae lacus.
         </p>
+        <ul class="tag-list flex gap-4">
+          <TagItem label="TechLover" color="#E3AB3E" />
+          <TagItem label="Pai de Pet" color="#30ADF3" />
+        </ul>
       </div>
-      <ul class="tag-list">
-        <TagItem />
-        <TagItem />
-        <TagItem />
-      </ul>
     </div>
     <div class="header-profile__social-media rounded-3xl p-6 col-span-2 h-full">
       <h4 class="uppercase mb-3">Redes Sociais</h4>
@@ -86,12 +78,11 @@ h1 {
   }
 }
 
-.header-profile__social-media {
-  background-color: color('secondaryLight', 'base');
+.header-profile__avatar {
+  padding: 0;
 }
 
-.header-profile__avatar,
-.header-profile__about-block {
-  background: color('secondaryLight', 'lightest');
+.header-profile__social-media {
+  background-color: color('secondaryLight', 'base');
 }
 </style>
