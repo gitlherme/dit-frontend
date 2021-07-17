@@ -1,18 +1,18 @@
 <template>
   <nav class="navbar-default">
-    <div class="container">
-      <div class="navbar-default__logo">
+    <div class="container grid grid-cols-12">
+      <div class="navbar-default__logo col-span-1">
         <img
           src="../../assets/images/logos/darkblue-dot-pink.svg"
           alt="Logo da DIT na cor azul escuro com um pontinho rosa."
         />
       </div>
-      <ul class="navbar-default__list">
+      <ul class="navbar-default__list col-span-9 flex justify-center">
         <li><NuxtLink to="/"> Home </NuxtLink></li>
         <li><NuxtLink to="/#pricing"> Preços </NuxtLink></li>
         <li><NuxtLink to="/blog"> Dicas </NuxtLink></li>
       </ul>
-      <div class="user">
+      <div class="user col-span-2 flex justify-around">
         <NuxtLink to="/login">
           <Button type="submit" value="Entrar" buttonClass="secondary" />
         </NuxtLink>
@@ -31,10 +31,13 @@
   width: 100%;
   background: color('secondaryLight', 'lightest');
   .container {
-    padding: 1rem 1rem;
-    display: flex;
-    justify-content: space-between;
+    padding: 1rem 0;
     align-items: center;
+    .navbar-default__logo {
+      img {
+        height: 1.5rem;
+      }
+    }
     .navbar-default__list {
       display: flex;
       li {
@@ -48,18 +51,6 @@
             color: color('dark', 'darkest');
             text-decoration: none;
           }
-        }
-      }
-    }
-    .navbar-default__logo {
-      img {
-        height: 2.5rem;
-      }
-    }
-    .user {
-      button {
-        &:first-child {
-          margin-right: 1rem;
         }
       }
     }

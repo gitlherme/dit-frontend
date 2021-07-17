@@ -1,6 +1,11 @@
 <template>
-  <a class="social-button rounded-3xl" :href="link" target="blank">
-    <font-awesome-icon :icon="['fas', 'github']" />
+  <a
+    class="social-button rounded-3xl"
+    :href="link"
+    target="blank"
+    :style="cssVars"
+  >
+    <font-awesome-icon :icon="['fab', icon]" />
   </a>
 </template>
 
@@ -15,9 +20,16 @@ export default {
       type: String,
       required: true,
     },
-    text: {
+    color: {
       type: String,
       required: true,
+    },
+  },
+  computed: {
+    cssVars() {
+      return {
+        '--color': this.color,
+      }
     },
   },
 }
@@ -25,9 +37,16 @@ export default {
 
 <style lang="scss" scoped>
 a {
-  display: block;
+  display: flex;
   padding: 1rem;
-  margin-bottom: 0.75rem;
-  background: #727272;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  background: var(--color);
+  align-items: center;
+  justify-content: center;
+  svg {
+    color: color('light', 'lightest');
+    font-size: 1.25rem;
+  }
 }
 </style>

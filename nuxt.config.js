@@ -55,7 +55,14 @@ export default {
   fontawesome: {
     icons: {
       solid: ['faBookmark', 'faBell', 'faHeart'],
-      brands: ['faApple', 'faDiscord', 'faAtlassian'],
+      brands: [
+        'faApple',
+        'faDiscord',
+        'faAtlassian',
+        'faTwitter',
+        'faLinkedin',
+        'faGithub',
+      ],
     },
   },
 
