@@ -1,6 +1,6 @@
 <template>
   <div class="register-template h-screen flex justify-center items-center">
-    <FormRegister />
+    <FormFinishRegister />
   </div>
 </template>
 

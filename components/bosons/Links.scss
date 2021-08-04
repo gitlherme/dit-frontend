@@ -1,0 +1,29 @@
+a {
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+
+  &.primary-link {
+    background-color: color('tertiary', 'lightest');
+    transition: background-color 0.3s ease-in;
+    font-weight: bold;
+    font-family: $secondary-font;
+    &:hover {
+      color: color('primaryDark', 'lightest');
+      background-color: color('tertiary', 'base');
+    }
+  }
+  &.secondary-link {
+    background-color: transparent;
+    border: 1px solid color('dark', 'lightest');
+    color: color('dark', 'lightest');
+    font-family: $primary-font;
+  }
+  &.tertiary-link {
+    background-color: color('dark', 'lightest');
+    color: color('light', 'lightest');
+    border: 1px solid color('dark', 'lightest');
+    font-family: $primary-font;
+  }
+}

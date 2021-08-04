@@ -1,5 +1,5 @@
 <template>
-  <LoginTemplate />
+  <FinishRegisterTemplate />
 </template>
 
 <script lang="ts">
