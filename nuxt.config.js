@@ -60,6 +60,7 @@ export default {
         'faHeart',
         'faEnvelopeOpenText',
         'faUserCheck',
+        'faCheckCircle',
       ],
       brands: [
         'faApple',

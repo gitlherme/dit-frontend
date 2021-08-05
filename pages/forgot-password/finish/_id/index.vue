@@ -1,6 +1,6 @@
 <template>
   <div class="forgot-password">
-    <ForgotPasswordTemplate />
+    <FinishForgotPasswordTemplate />
   </div>
 </template>
 
