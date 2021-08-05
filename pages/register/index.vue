@@ -4,6 +4,6 @@
 
 <script lang="ts">
 export default {
-  layout: 'two-with-logo',
+  layout: 'two-columns',
 }
 </script>

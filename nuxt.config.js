@@ -44,7 +44,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
     'bootstrap-vue/nuxt',
-    '@nuxtjs/axios',
+    '@nuxtjs/proxy',
   ],
 
   styleResources: {
@@ -54,13 +54,36 @@ export default {
   // Fontawesome
   fontawesome: {
     icons: {
-      solid: ['faBookmark', 'faBell', 'faHeart'],
-      brands: ['faApple', 'faDiscord', 'faAtlassian'],
+      solid: [
+        'faBookmark',
+        'faBell',
+        'faHeart',
+        'faEnvelopeOpenText',
+        'faUserCheck',
+        'faCheckCircle',
+      ],
+      brands: [
+        'faApple',
+        'faDiscord',
+        'faAtlassian',
+        'faTwitter',
+        'faLinkedin',
+        'faGithub',
+      ],
     },
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    proxy: true,
+  },
+
+  proxy: {
+    '/api/': {
+      target: 'http://localhost:3333',
+      pathRewrite: { '^/api': '' },
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

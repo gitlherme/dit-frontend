@@ -1,12 +1,12 @@
 <template>
   <div>
     <form
-      class="form-register px-20 py-32 rounded-2xl flex flex-col"
-      @submit.prevent="registerUser"
+      class="form-forgot-password px-10 py-32 rounded-2xl flex flex-col"
+      @submit.prevent="sendNewPassword"
     >
-      <h1 class="mb-3">Crie uma nova conta</h1>
+      <h1 class="mb-3">Recuperar senha</h1>
       <small class="mb-3">
-        Vamos criar sua conta! Insira seu e-mail abaixo.
+        Digite seu e-mail abaixo para receber um e-mail de redefinição.
       </small>
       <label for="email-register">E-mail</label>
       <input
@@ -16,12 +16,17 @@
         type="text"
         name=""
       />
-      <Button type="submit" value="Cadastrar" buttonClass="primary" />
+      <Button type="submit" value="Receber e-mail" buttonClass="primary" />
       <NuxtLink to="/login" class="mt-3 mb-3 text-center">
-        Já possuo uma conta
+        Fazer login
       </NuxtLink>
     </form>
-    <ModalRegister :visible="modal.isVisible" />
+    <ModalRegister
+      title="E-mail enviado!"
+      content="Você recebeu um e-mail com a redefinição de senha. Cheque sua caixa de entrada."
+      redirectTo="/login"
+      :visible="modal.isVisible"
+    />
   </div>
 </template>
 
@@ -30,7 +35,7 @@ export default {
   data() {
     return {
       form: {
-        redirectUrl: 'http://localhost:3000/register/finish',
+        redirectUrl: 'http://localhost:3000/forgot-password/finish',
         email: '',
       },
       modal: {
@@ -39,8 +44,8 @@ export default {
     }
   },
   methods: {
-    async registerUser() {
-      await this.$axios.$post('/api/users/register', this.form, {
+    async sendNewPassword() {
+      await this.$axios.$post('/api/forgot-password', this.form, {
         headers: { 'Content-Type': 'application/json' },
       })
       this.showModal()
@@ -54,7 +59,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.form-register {
+.form-forgot-password {
   h1 {
     font-size: 1.5em;
     margin-bottom: 0;
