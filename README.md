@@ -13,9 +13,12 @@
 
 A DIT é  uma plataforma que visa inserir pessoas com perfis diversos nas empresas, focando principalmente em pessoas de periferia, negras e LGBTQIA+.
 
-🎨 -> O design do projeto pode ser encontrado no [Figma](https://www.figma.com/file/3lXh5IzSKuI2Cg0S4QRttN/?node-id=5%3A2), e foi desenhado pelo [Alyson Vilela](https://github.com/alysonvilela).
+🎨 - O design do projeto pode ser encontrado no [Figma](https://www.figma.com/file/3lXh5IzSKuI2Cg0S4QRttN/?node-id=5%3A2).
 
-📫 -> O backend desse projeto pode ser encontrado [nesse repositório](https://github.com/gitlherme/dit-api).
+
+📫 - O backend desse projeto pode ser encontrado [nesse repositório](https://github.com/gitlherme/dit-api).
+
+💻 - Você pode visualizar o frontend do projeto [clicando aqui](https://dit.guilhermevieira.dev).
 
 
 ## Setup do projeto
