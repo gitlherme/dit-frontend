@@ -11,7 +11,7 @@
       <label for="email-register">E-mail</label>
       <input
         id="emailRegister"
-        v-model="form.email"
+        v-model="email"
         class="px-3 py-2 mb-3 rounded-lg"
         type="text"
         name=""
@@ -25,32 +25,31 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+import { userRegister } from '@/store'
+export default Vue.extend({
   data() {
     return {
-      form: {
-        redirectUrl: 'http://localhost:3000/register/finish',
-        email: '',
-      },
+      email: '',
       modal: {
         isVisible: false,
-      },
+      }
     }
   },
   methods: {
     async registerUser() {
-      await this.$axios.$post('/api/users/register', this.form, {
-        headers: { 'Content-Type': 'application/json' },
-      })
-      this.showModal()
-    },
+      try {
+        await userRegister.create({ email: this.email, redirectUrl: "http://localhost:3000/register" })
+        this.email = ''
+        this.modal.isVisible = true
 
-    showModal() {
-      this.modal.isVisible = true
-    },
-  },
-}
+      } catch {
+        alert('Oops! Algo deu errado')
+      }
+    }
+  }
+})
 </script>
 
 <style lang="scss" scoped>

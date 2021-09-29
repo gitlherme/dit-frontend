@@ -45,6 +45,7 @@ export default {
     '@nuxtjs/style-resources',
     'bootstrap-vue/nuxt',
     '@nuxtjs/proxy',
+    'cookie-universal-nuxt'
   ],
 
   styleResources: {

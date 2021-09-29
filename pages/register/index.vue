@@ -3,7 +3,9 @@
 </template>
 
 <script lang="ts">
-export default {
-  layout: 'two-columns',
-}
+import Vue from 'vue'
+export default Vue.extend({
+  middleware: 'guest',
+  layout: 'two-columns'
+})
 </script>

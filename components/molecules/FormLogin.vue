@@ -32,36 +32,33 @@
   </form>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+import { auth } from '@/store'
+export default Vue.extend({
   data() {
     return {
       form: {
         email: '',
-        password: '',
+        password: ''
       },
-      wrongPassword: false,
+      wrongPassword: false
     }
   },
   methods: {
-    async authUser() {
+    async authUser () {
       try {
-        const response = await this.$axios.$post('/api/auth', this.form, {
-          headers: { 'Content-Type': 'application/json' },
+        await auth.create({
+          email: this.form.email,
+          password: this.form.password
         })
-        const token = `${response.type} ${response.token}`
-        const tokenExpires = response.expires_at
-        localStorage.setItem('token', token)
-        localStorage.setItem('token_expires', tokenExpires)
         this.$router.push('/dashboard')
-      } catch (e) {
-        if (e.status === 400) {
-          this.wrongPassword = true
-        }
+      } catch (error) {
+        this.wrongPassword = true
       }
-    },
-  },
-}
+    }
+  }
+})
 </script>
 
 <style lang="scss" scoped>

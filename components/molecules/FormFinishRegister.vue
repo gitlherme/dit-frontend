@@ -10,11 +10,11 @@
       <label for="email-register">E-mail</label>
       <input
         id="email"
+        v-model="user.email"
         class="px-3 py-2 mb-3 rounded-lg"
         type="text"
         name="email"
-        :value="user.email"
-        disabled
+        readonly
       />
 
       <label for="name-register">Nome</label>
@@ -60,49 +60,38 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
+<script lang="ts">
+import Vue from 'vue'
+import { userRegister } from '@/store'
+export default Vue.extend({
+  data () {
     return {
       user: {
-        key: this.$route.params.id,
-        email: '',
+        email: userRegister.$user.email,
         name: '',
         password: '',
-        passwordConfirmation: '',
+        passwordConfirmation: ''
       },
       modal: {
         isVisible: false,
-      },
+      }
     }
   },
-  async mounted() {
-    await this.getData()
-  },
   methods: {
-    async getData() {
-      const data = await this.$axios.$get(
-        `/api/users/register/${this.user.key}`
-      )
-      this.user.email = data.email
-    },
-
     async updateUser() {
-      const { key, name, password, passwordConfirmation } = this.user
-      await this.$axios.$put('/api/users/register', {
-        key,
-        name,
-        password,
-        passwordConfirmation,
-      })
-      this.showModal()
-    },
+      try {
+         await userRegister.update({
+          key: this.$route.params.key,
+          ...this.user
+         })
+         this.modal.isVisible = true
+      } catch (error) {
+        alert('Aconteceu algo errado.')
+      }
+    }
+  }
 
-    showModal() {
-      this.modal.isVisible = true
-    },
-  },
-}
+})
 </script>
 
 <style lang="scss" scoped>
