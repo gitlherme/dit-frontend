@@ -1,5 +1,5 @@
 import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators'
-import { $axios } from '@/utils/nuxt-instance'
+import { $axios, $cookies } from '@/utils/nuxt-instance'
 import User from '@/models/User'
 
 interface UpdatePayload {
@@ -8,12 +8,12 @@ interface UpdatePayload {
   bio?: string
 }
 
-@Module({ name: 'user/main', stateFactory: true, namespaced: true})
-export default class UserMain extends VuexModule {
+@Module({ name: 'users', stateFactory: true, namespaced: true})
+export default class Users extends VuexModule {
   private user = {} as User
 
 
-  get $user() {
+  get $single() {
     return this.user
   }
 
@@ -22,10 +22,20 @@ export default class UserMain extends VuexModule {
     this.user = user
   }
 
+  @Mutation
+  SET_USER_AVATAR(avatar: User['avatar']) {
+    this.user.avatar = avatar
+  }
+
+  @Mutation
+  SET_USER_SOCIALS(socials: User['socials']) {
+    this.user.socials = socials
+  }
+
   @Action
   public async show(){
-    const user = await $axios.$get('/user')
-    console.log(user)
+    if (!$cookies.get('token')) return console.log('no token')
+    const user = await $axios.$get('/api/user')
     this.context.commit('UPDATE_USER', user)
   }
 

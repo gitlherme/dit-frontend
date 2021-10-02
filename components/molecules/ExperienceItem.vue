@@ -16,19 +16,19 @@
 export default {
   props: {
     fromYear: {
-      type: Number,
+      type: String,
       required: true,
     },
     toYear: {
-      type: Number,
+      type: String,
       required: true,
     },
     fromMonth: {
-      type: Number,
+      type: String,
       required: true,
     },
     toMonth: {
-      type: Number,
+      type: String,
       required: true,
     },
     role: {

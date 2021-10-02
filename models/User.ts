@@ -6,4 +6,16 @@ export default interface User {
   email: string
   createdAt: string,
   updatedAt: string
+  avatar?: {
+    url: string
+  }
+  socials?: {
+    linkedin_url?: string
+    github_url?: string
+    twitter_url?: string
+  }
+  educations?: []
+  previewExperiences?: []
+  hardSkills?: []
+  softSkills?: []
 }

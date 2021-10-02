@@ -1,21 +1,26 @@
 import { Store } from 'vuex'
 import { getModule } from 'vuex-module-decorators'
 import UserRegister from '@/store/users/register'
-import UserMain from '@/store/users/main'
+import Users from '@/store/users'
+import UserAvatar from '@/store/users/avatar'
+import UserSocials from '@/store/users/socials'
 
 import Auth from '@/store/auth'
 
 let userRegister: UserRegister
-let userMain: UserMain
+let users: Users
+let userAvatar: UserAvatar
+let userSocials: UserSocials
 let auth: Auth
 
 
 function initializeStores(store: Store<any>): void {
   userRegister = getModule(UserRegister, store)
-  userMain = getModule(UserMain, store)
-
+  users = getModule(Users, store)
+  userAvatar = getModule(UserAvatar, store)
+  userSocials = getModule(UserSocials, store)
   auth = getModule(Auth, store)
 
 }
 
-export { initializeStores, userRegister, userMain, auth }
+export { initializeStores, userRegister, users, userAvatar, userSocials, auth }
