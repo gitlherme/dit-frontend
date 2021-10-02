@@ -12,7 +12,7 @@ export default Vue.extend({
     try {
       const key = params.key as string
       await userRegister.show({ key })
-    } catch(error) {
+    } catch {
       return redirect('/404')
     }
   }

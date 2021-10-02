@@ -39,12 +39,12 @@ export default class UserRegister extends VuexModule {
 
   @Action
   public async show({ key }: ShowPayload) {
-    const user = await $axios.get(`/api/users/register/${key}`)
+    const user = await $axios.$get(`/api/users/register/${key}`)
     this.context.commit('UPDATE_USER', user)
   }
 
   @Action
   public async update(payload: UpdatePayload) {
-    await $axios.put('/api/users/register/', payload)
+    await $axios.$put('/api/users/register/', payload)
   }
 }
