@@ -3,14 +3,14 @@
     <div class="header-profile__avatar light-block col-span-4">
       <div class="header-profile__avatar_image">
         <ImageRounded
-          :src="user.avatar.url"
+          :src="$user.avatar.url"
         />
       </div>
       <div class="header-profile__avatar-text p-6 flex flex-col">
         <span class="header-profile__avatar-role uppercase"
           >Front-end Developer</span
         >
-        <p class="header-profile__avatar-name p-bold">{{ user.name }}</p>
+        <p class="header-profile__avatar-name p-bold">{{ $user.name }}</p>
         <p class="header-profile__avatar-save-cv p-bold">+ Salvar Currículo</p>
       </div>
     </div>
@@ -20,7 +20,7 @@
         <h4 class="uppercase">A minha biografia</h4>
         <hr />
         <p class="">
-          {{ user.bio }}
+          {{ $user.bio }}
         </p>
       </div>
     </div>
@@ -31,18 +31,18 @@
         <SocialButton
           icon="linkedin"
           color="#0E72A3"
-          link="https://google.com/"
+          :link="$user.socials.linkedin_url"
         />
         <SocialButton
           icon="twitter"
           color="#34B3F7"
-          link="https://google.com/"
+          :link="$user.socials.twitter_url"
         />
         <SocialButton
           icon="github"
           161414
           color="#161414"
-          link="https://google.com/"
+          :link="$user.socials.github_url"
         />
       </ul>
     </div>
@@ -53,13 +53,11 @@
 import Vue from 'vue'
 import { users } from '@/store'
 export default Vue.extend({
-  data() {
-    return {
-      user: {
-        ...users.$single
-      },
+  computed: {
+    $user() {
+      return users.$single
     }
-  },
+  }
 })
 </script>
 

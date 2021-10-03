@@ -1,9 +1,11 @@
 <template>
   <div class="account">
-    <div class="account-avatar">
-      <img :src="$user.avatar ? $user.avatar.url : 'https://caocidadao.com.br/wp-content/uploads/2019/09/user.png'" :alt="`Foto de ${$user.name}`">
-      <label for="avatar">Alterar foto de perfil</label>
-      <input type="file" id="avatar" @input="updateAvatar">
+    <div class="account-avatar w-full flex items-center flex-column p-12">
+      <img :src="$user.avatar ? $user.avatar.url : 'https://caocidadao.com.br/wp-content/uploads/2019/09/user.png'" :alt="`Foto de ${$user.name}`" class="w-48 h-48 rounded-full">
+      <div class="account-change-avatar flex flex-column text-center mt-3">
+        <label for="avatar">Alterar foto de perfil</label>
+        <input type="file" id="avatar" @input="updateAvatar">
+      </div>
     </div>
     <AccountForm />
   </div>
