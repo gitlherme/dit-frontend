@@ -1,0 +1,31 @@
+.formulate-form {
+  * {
+    margin-bottom: .5rem;
+  }
+  label {
+    font-size: 1rem;
+  }
+  input, textarea, select {
+    width: 100%;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    &:focus {
+      border: 1px solid color('tertiary', 'lightest');
+    }
+  }
+  input[type="checkbox"] {
+    min-width: 20px;
+  }
+  textarea {
+    min-height: 150px;
+  }
+  .formulate-input-help {
+    font-size: .8rem;
+  }
+  .form-account-checkbox{
+    .formulate-input-wrapper {
+      display: flex !important;
+    }
+  }
+}
