@@ -133,7 +133,9 @@ export default Vue.extend({
             description: ''
           }
         ],
-        hardSkills: [],
+        hardSkills: [
+
+        ],
         softSkills: []
       }
     }
