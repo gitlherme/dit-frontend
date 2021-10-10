@@ -32,6 +32,11 @@ export default class Users extends VuexModule {
     this.user.socials = socials
   }
 
+  @Mutation
+  SET_USER_SOFT_SKILLS(softSkills: User['softSkills']) {
+    this.user.softSkills = softSkills
+  }
+
   @Action
   public async show(){
     if (!$cookies.get('token')) return console.log('no token')

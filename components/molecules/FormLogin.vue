@@ -22,7 +22,7 @@
     />
     <small v-if="wrongPassword">Senha incorreta! </small>
 
-    <Button type="submit" value="Entrar" buttonClass="primary" />
+    <Button type="submit" value="Entrar" variant="primary" />
     <NuxtLink to="/forgot-password" class="mt-3 mb-2 text-center">
       Esqueci minha senha
     </NuxtLink>

@@ -20,10 +20,10 @@
         </div>
         <div v-if="!userAuthenticated" class="flex justify-around">
           <NuxtLink to="/login">
-            <Button type="submit" value="Entrar" buttonClass="secondary" />
+            <Button type="submit" value="Entrar" variant="secondary" />
           </NuxtLink>
           <NuxtLink to="/register">
-            <Button type="submit" value="Registrar" buttonClass="tertiary" />
+            <Button type="submit" value="Registrar" variant="tertiary" />
           </NuxtLink>
         </div>
       </div>

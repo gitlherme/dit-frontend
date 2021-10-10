@@ -21,7 +21,7 @@
         class="px-3 py-2 mb-3 rounded-lg"
         type="password"
       />
-      <Button type="submit" value="Redefinir Senha" buttonClass="primary" />
+      <Button type="submit" value="Redefinir Senha" variant="primary" />
       <NuxtLink to="/login" class="mt-3 mb-3 text-center">
         Fazer login
       </NuxtLink>

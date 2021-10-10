@@ -1,6 +1,6 @@
 <template>
   <div class="header-profile col-span-12 grid grid-cols-12 gap-4">
-    <div class="header-profile__avatar light-block col-span-4">
+    <div class="header-profile__avatar light-block col-span-3">
       <div class="header-profile__avatar_image">
         <ImageRounded
           :src="$user.avatar.url"
@@ -8,10 +8,9 @@
       </div>
       <div class="header-profile__avatar-text p-6 flex flex-col">
         <span class="header-profile__avatar-role uppercase"
-          >Front-end Developer</span
+          >{{ $user.role }}</span
         >
         <p class="header-profile__avatar-name p-bold">{{ $user.name }}</p>
-        <p class="header-profile__avatar-save-cv p-bold">+ Salvar Currículo</p>
       </div>
     </div>
     <div class="header-profile__about col-span-6">

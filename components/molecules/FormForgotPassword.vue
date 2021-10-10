@@ -16,7 +16,7 @@
         type="text"
         name=""
       />
-      <Button type="submit" value="Receber e-mail" buttonClass="primary" />
+      <Button type="submit" value="Receber e-mail" variant="primary" />
       <NuxtLink to="/login" class="mt-3 mb-3 text-center">
         Fazer login
       </NuxtLink>

@@ -44,7 +44,7 @@
         name="password-confirmation"
       />
 
-      <Button type="submit" value="Finalizar cadastro" buttonClass="primary" />
+      <Button type="submit" value="Finalizar cadastro" variant="primary" />
       <NuxtLink to="/login" class="mt-3 mb-3 text-center">
         Já possuo uma conta
       </NuxtLink>

@@ -22,7 +22,7 @@ export default {
   css: ['normalize.css/normalize.css', '@/assets/scss/base.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/accessor','@/plugins/axios', '@/plugins/notifications.client'],
+  plugins: ['@/plugins/accessor','@/plugins/axios', '@/plugins/notifications.client', '@/plugins/formulate'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [{ path: '@/components/', pathPrefix: false }],
@@ -33,6 +33,7 @@ export default {
     '@nuxt/typescript-build',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/fontawesome',
+    '@braid/vue-formulate/nuxt'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -85,4 +86,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  formulate: {
+    configPath: '@/formulate.config.js'
+  }
 }

@@ -1,5 +1,5 @@
 <template>
-  <button :type="type" :class="buttonClass">{{ value }}</button>
+  <button :type="type" :class="variant">{{ value }}</button>
 </template>
 
 <script lang="ts">
@@ -14,7 +14,7 @@ export default Vue.extend({
       type: String,
       required: true,
     },
-    buttonClass: {
+    variant: {
       type: String,
       required: true,
     },

@@ -16,7 +16,7 @@
         type="text"
         name=""
       />
-      <Button type="submit" value="Cadastrar" buttonClass="primary" />
+      <Button type="submit" value="Cadastrar" variant="primary" />
       <NuxtLink to="/login" class="mt-3 mb-3 text-center">
         Já possuo uma conta
       </NuxtLink>

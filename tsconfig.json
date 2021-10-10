@@ -28,7 +28,8 @@
       "@nuxt/types",
       "@nuxtjs/axios",
       "@types/node",
-      "vue-notification"
+      "vue-notification",
+      "@braid/vue-formulate"
     ]
   },
   "exclude": [

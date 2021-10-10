@@ -6,7 +6,7 @@
       />
       <Button
         type="text"
-        buttonClass="secondary"
+        variant="secondary"
         value="Seus Currículos"
       ></Button>
     </div>

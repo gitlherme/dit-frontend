@@ -2,9 +2,10 @@ export default interface User {
   id: number
   name: string
   username: string
+  role: string
   bio: string
   email: string
-  createdAt: string,
+  createdAt: string
   updatedAt: string
   avatar?: {
     url: string
