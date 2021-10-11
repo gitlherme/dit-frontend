@@ -2,39 +2,31 @@
   <div class="professional-experience">
     <h2 class="mb-4">Experiências</h2>
     <div class="professional-experience__block light-block">
-      <ExperienceItem
-        fromMonth="fev"
-        fromYear="2020"
-        toMonth="ago"
-        toYear="2020"
-        role="Desenvolvedor Frontend Jr"
-        company="Coca Cola"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor impedit perspiciatis voluptas aperiam aut nemo sapiente laborum quae id fugit, expedita atque! Temporibus sint, quam cum ut omnis qui impedit?"
-      />
-      <ExperienceItem
-        fromMonth="fev"
-        fromYear="2020"
-        toMonth="ago"
-        toYear="2020"
-        role="Desenvolvedor Frontend Jr"
-        company="Coca Cola"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor impedit perspiciatis voluptas aperiam aut nemo sapiente laborum quae id fugit, expedita atque! Temporibus sint, quam cum ut omnis qui impedit?"
-      />
-      <ExperienceItem
-        fromMonth="fev"
-        fromYear="2020"
-        toMonth="ago"
-        toYear="2020"
-        role="Desenvolvedor Frontend Jr"
-        company="Coca Cola"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor impedit perspiciatis voluptas aperiam aut nemo sapiente laborum quae id fugit, expedita atque! Temporibus sint, quam cum ut omnis qui impedit?"
-      />
+      <div v-for="experience in $user.previewExperiences" :key="experience.id">
+        <ExperienceItem
+          fromMonth="fev"
+          fromYear="2020"
+          toMonth="ago"
+          toYear="2020"
+          :role="experience.role"
+          :company="experience.company"
+          :description="experience.description"
+        />
+      </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {}
+<script lang="ts">
+import Vue from 'vue'
+import { users } from '@/store'
+export default Vue.extend({
+  computed: {
+    $user() {
+      return users.$single
+    }
+  },
+})
 </script>
 
 <style lang="scss" scoped></style>

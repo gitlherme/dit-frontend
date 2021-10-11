@@ -33,6 +33,11 @@ export default class Users extends VuexModule {
   }
 
   @Mutation
+  SET_USER_EDUCATIONS(educations: User['educations']) {
+    this.user.educations = educations
+  }
+
+  @Mutation
   SET_USER_SOFT_SKILLS(softSkills: User['softSkills']) {
     this.user.softSkills = softSkills
   }

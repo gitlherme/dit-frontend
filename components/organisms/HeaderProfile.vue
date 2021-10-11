@@ -13,7 +13,7 @@
         <p class="header-profile__avatar-name p-bold">{{ $user.name }}</p>
       </div>
     </div>
-    <div class="header-profile__about col-span-6">
+    <div class="header-profile__about col-span-7">
       <TitleWithMark text="Perfil" />
       <div class="header-profile__about-block light-block">
         <h4 class="uppercase">A minha biografia</h4>
@@ -21,6 +21,11 @@
         <p class="">
           {{ $user.bio }}
         </p>
+        <div class="soft-skills flex flex-wrap gap-3">
+          <div v-for="skill in $user.softSkills" :key="skill.id">
+            <TagItem :label="skill.name" color="#30ADF3" />
+          </div>
+        </div>
       </div>
     </div>
     <div class="header-profile__social-media col-span-2">

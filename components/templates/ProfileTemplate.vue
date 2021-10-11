@@ -14,9 +14,6 @@
     <div class="col-span-12 mt-36">
       <TechnicalKnowledgeBlock />
     </div>
-    <div class="col-span-6 mt-36">
-      <SoftSkillsBlock />
-    </div>
   </div>
 </template>
 
