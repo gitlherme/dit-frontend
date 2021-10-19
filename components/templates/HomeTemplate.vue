@@ -6,9 +6,7 @@
       <p>Sempre abrindo portas e quebrando barreiras, ajudamos startups a contratar os melhores profissionais com diversidade e assim, continuamos construindo pontes.</p>
       <NuxtLink to="/" class="simple-link">Saiba como</NuxtLink>
     </section>
-    <div class="how-works">
-      <StepCircle step="1" />
-    </div>
+    <HowItWorks />
   </div>
 </template>
 

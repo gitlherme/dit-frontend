@@ -1,30 +1,59 @@
 <template>
-  <span :class="`step-circle ${isFirst ? 'is-first' : 'not-first'} ${ isLast ? 'is-last' : 'not-last'} ${variant}`">{{ step }}</span>
+  <span class="step-circle"></span>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
-  props: {
-    step: {
-      type: Number,
-      required: true
-    },
-    isFirst: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
-    isLast: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
-    variant: {
-      type: String,
-      required: true,
+
+
+<style lang="scss" scoped>
+.step-circle {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #cecece;
+  box-sizing: border-box;
+  margin-right: 0.5rem;
+  &.with-line{
+      &::before {
+      content: "";
+      position: absolute;
+      border: 1px dashed #cecece;
+      height: 50px;
+      z-index: 1;
+      transform: translate(700%, -90%);
     }
   }
-})
-</script>
-
+  &.primary {
+    background-color: color('primaryLight', 'base');
+    &.with-line {
+      &::before {
+        border: 1px dashed color('primaryLight', 'base');
+      }
+    }
+  }
+  &.secondary {
+    background-color: color('secondary', 'lightest');
+    &.with-line {
+      &::before {
+        border: 1px dashed color('secondary', 'lightest');
+      }
+    }
+  }
+  &.tertiary {
+    background-color: color('tertiary', 'base');
+    &.with-line {
+      &::before {
+        border: 1px dashed color('tertiary', 'base');
+      }
+    }
+  }
+  &.finish {
+    background-color: #2ED47A;
+    &.with-line {
+      &::before {
+        border: 1px dashed #2ED47A;
+      }
+    }
+  }
+}
+</style>
