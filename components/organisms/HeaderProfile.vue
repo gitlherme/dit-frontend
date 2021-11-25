@@ -1,5 +1,5 @@
 <template>
-  <div class="header-profile col-span-12 grid grid-cols-12 gap-4">
+  <div class="header-profile flex flex-column gap-3 col-span-12 md:grid md:grid-cols-12 md:gap-4">
     <div class="header-profile__avatar light-block col-span-3">
       <div class="header-profile__avatar_image">
         <ImageRounded

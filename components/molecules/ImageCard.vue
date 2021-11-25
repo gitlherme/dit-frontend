@@ -1,5 +1,5 @@
 <template>
-  <div class="image-card" :style="cardVars">
+  <div class="image-card flex items-end" :style="cardVars">
     <NuxtLink to="/noticia-x">
       <div class="image-card__content">
         <span class="image-card__content-tag uppercase">{{ tag }}</span>

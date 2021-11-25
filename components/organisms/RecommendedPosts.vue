@@ -1,7 +1,7 @@
 <template>
-  <div class="posts col-span-12 mt-32">
+  <div class="posts col-span-12 mt-16 md:mt-32">
     <h2>Postagens Recomendadas</h2>
-    <div class="posts-cards grid grid-cols-4 gap-4">
+    <div class="posts-cards flex flex-column gap-2 md:grid md:grid-cols-4 md:gap-4">
       <ImageCard
         src="https://images.unsplash.com/photo-1542435503-956c469947f6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80"
         tag="currículo"

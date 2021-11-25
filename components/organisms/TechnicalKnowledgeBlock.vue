@@ -1,7 +1,7 @@
 <template>
   <div class="technical-knowledge">
-    <h2 class="mb-5 text-center">Conhecimento Técnico</h2>
-    <div class="flex gap-6 justify-center">
+    <h2 class="mb-5 md:text-center">Conhecimento Técnico</h2>
+    <div class="flex flex-column md:flex-row gap-2 md:gap-6 items-center md:items-start justify-center">
       <div v-for="hardSkill in $user.hardSkills" :key="hardSkill.id">
         <HardSkillItem :title="hardSkill.name" :experienceYears="hardSkill.experience_years" />
       </div>

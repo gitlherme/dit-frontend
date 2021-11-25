@@ -2,8 +2,6 @@ a {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  padding: 0.5rem 1.5rem;
-
   &.primary-link {
     background-color: color('tertiary', 'lightest');
     transition: background-color 0.3s ease-in;
