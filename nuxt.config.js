@@ -60,6 +60,7 @@ export default {
         'faEnvelopeOpenText',
         'faUserCheck',
         'faCheckCircle',
+        'faBars'
       ],
       brands: [
         'faApple',
