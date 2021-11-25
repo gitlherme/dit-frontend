@@ -1,7 +1,7 @@
 <template>
-  <div class="col-span-12 mt-32 grid grid-cols-12 gap-x-4">
+  <div class="flex flex-column gap-2 md:col-span-12 mt-16 md:mt-32 md:grid md:grid-cols-12 md:gap-x-4">
     <h2 class="col-span-12">Em andamento</h2>
-    <div class="jobs col-span-6 grid grid-cols-12 items-center">
+    <div class="jobs col-span-6 md:grid md:grid-cols-12 items-center">
       <div class="col-span-6">
         <div class="job-item flex gap-4 mt-8">
           <div class="icon">

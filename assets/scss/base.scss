@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 @import './formulate.scss';
 
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
 .light-block {
   background-color: color('secondaryLight', 'lightest');
   border-radius: 0.5rem;
