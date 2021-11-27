@@ -1,7 +1,7 @@
 <template>
   <div>
     <form
-      class="form-register px-20 py-32 rounded-2xl flex flex-col"
+      class="form-register px-8 md:px-20 py-32 rounded-2xl flex flex-col"
       @submit.prevent="registerUser"
     >
       <h1 class="mb-3">Crie uma nova conta</h1>

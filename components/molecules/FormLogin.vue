@@ -1,6 +1,6 @@
 <template>
   <form
-    class="form-login px-20 py-32 rounded-2xl flex flex-col"
+    class="form-login px-8 md:px-20 py-32 rounded-2xl flex flex-col"
     @submit.prevent="authUser"
   >
     <h1 class="mb-3">Entrar na plataforma</h1>
