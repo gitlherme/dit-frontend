@@ -40,7 +40,7 @@ export default Vue.extend({
   methods: {
     async registerUser() {
       try {
-        await userRegister.create({ email: this.email, redirectUrl: "http://localhost:3000/register" })
+        await userRegister.create({ email: this.email, redirectUrl: "https://dit-frontend.herokuapp.com/register" })
         this.email = ''
         this.modal.isVisible = true
 
