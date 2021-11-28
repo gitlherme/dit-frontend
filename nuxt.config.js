@@ -54,7 +54,7 @@ export default {
   googleFonts: {
     families: {
       Inter: true,
-      'Dm+Sans': true
+      'DM+Sans': true
     }
   },
 

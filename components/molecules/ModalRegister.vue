@@ -100,6 +100,10 @@ export default {
   left: 0;
   height: 100%;
   width: 100%;
+
+  button {
+    padding: .5rem .8rem;
+  }
   .modal-register__wrapper {
     .close-modal {
       right: 0;
