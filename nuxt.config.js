@@ -33,7 +33,8 @@ export default {
     '@nuxt/typescript-build',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/fontawesome',
-    '@braid/vue-formulate/nuxt'
+    '@braid/vue-formulate/nuxt',
+    '@nuxtjs/google-fonts'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -48,6 +49,13 @@ export default {
 
   styleResources: {
     scss: ['@/components/bosons/*.scss'],
+  },
+
+  googleFonts: {
+    families: {
+      Inter: true,
+      'Dm+Sans': true
+    }
   },
 
   // Fontawesome
