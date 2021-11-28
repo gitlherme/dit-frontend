@@ -80,7 +80,7 @@ export default {
 
   proxy: {
     '/api/': {
-      target: 'http://localhost:3333',
+      target: 'https://dit-api-app.herokuapp.com/',
       pathRewrite: { '^/api': '' },
     },
   },
