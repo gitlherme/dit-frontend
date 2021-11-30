@@ -149,7 +149,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { users, userSocials, userEducations } from '@/store'
+import { users, userSocials } from '@/store'
 export default Vue.extend({
   data() {
     return {
@@ -169,10 +169,6 @@ export default Vue.extend({
         softSkills: Object.assign({}, users.$single.softSkills),
       }
     }
-  },
-  mounted() {
-    console.log(users.$single)
-    console.log('previewExperiences:', this.user.previewExperiences)
   },
   methods: {
     async updateUser() {

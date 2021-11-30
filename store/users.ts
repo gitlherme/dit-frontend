@@ -44,7 +44,7 @@ export default class Users extends VuexModule {
 
   @Action
   public async show(){
-    if (!$cookies.get('token')) return console.log('no token')
+    if (!$cookies.get('token')) return 
     const user = await $axios.$get('/api/user')
     this.context.commit('UPDATE_USER', user)
   }
